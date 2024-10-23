@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "devstore",
+  title: {
+    template: '%s | devstore',
+    default: 'devstore',
+  },
+  
+
 };
 
 export default function RootLayout({
