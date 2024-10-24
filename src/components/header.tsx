@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import {Search} from 'lucide-react'
 import React from 'react'
 import Image from 'next/image';
 import CartWidget from './cart-widget';
+import SearchForm from './search-form';
 
 const Header = () => {
   return (
@@ -11,6 +11,8 @@ const Header = () => {
         <Link href="/" className='text-2xl font-extrabold text-white'>
         devstore
         </Link>
+
+        <SearchForm />
 
       </div>
 

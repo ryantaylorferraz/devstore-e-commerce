@@ -14,7 +14,7 @@ type ProductProps = {
 async function getProduct(slug: string): Promise<IProduct> {
   const response = await api(`/products/${slug}`, {
     next: {
-      revalidate: 60 * 60, // 1 hour
+      revalidate: 60 * 60,
     },
   })
 

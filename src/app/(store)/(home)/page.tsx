@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const getFeaturedProducts = async (): Promise<IProduct[]> => {
   const response = await api('/products/featured', {
-    cache: "no-store", // dessa forma, sempre que der um refrash, sera feita uma revalidação
-    // next: {
-    //   revalidate: 60 * 60
-    // }
+    // cache: "no-store", // dessa forma, sempre que der um refrash, sera feita uma revalidação
+    next: {
+      revalidate: 60 * 60
+    }
   })
 
   const products = await response.json()
